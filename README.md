@@ -5,7 +5,6 @@
 
 | 項目 | 內容 |
 |------|------|
-| 專案階段 | Proposal（尚未實作） |
 | 課程 | 物聯網（IoT）期末專題 |
 | 組員 | 潘兆邠、邱冠霖、林浚偉、張皓崴、黃翊豪 |
 
@@ -84,7 +83,7 @@ labsteward/
 
 ## Installation（預定）
 
-> ⚠️ 此區段為 Proposal 階段預定指令，程式完成後更新。
+> 此區段為預定指令，程式完成後更新。
 
 ```bash
 git clone https://github.com/hiskdk/AIOT-Final.git labsteward
