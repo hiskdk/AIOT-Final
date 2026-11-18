@@ -1,0 +1,16 @@
+listing_id,category_code,spec,ask_price,listed_at,condition
+# 模擬二手掛牌資料（供 M3 殘值估算使用）
+# 狀態：模擬資料，僅供開發測試
+# 注意：掛牌價非成交價（DESIGN.md 第 12.1 章）
+# 資料來源：模擬自二手平台（露天、蝦皮等），實作時需蒐集真實掛牌資料
+#
+L001,31102,Intel Core i5 / 8GB / 256GB SSD,8000,2026-10-01,fair
+L002,31102,Intel Core i5 / 8GB / 256GB SSD,9500,2026-10-15,good
+L003,31102,Intel Core i7 / 16GB / 512GB SSD,18000,2026-10-20,good
+L004,31102,AMD Ryzen 5 / 8GB / 256GB SSD,7500,2026-11-01,fair
+L005,31101,Intel Core i7 / 32GB / 1TB SSD,20000,2026-10-05,good
+L006,31101,Intel Core i5 / 16GB / 512GB SSD,12000,2026-10-10,fair
+L007,31103,NVIDIA RTX 3090 / 32GB / 1TB NVMe,65000,2026-09-20,good
+L008,31103,NVIDIA RTX 4090 / 64GB / 2TB NVMe,95000,2026-11-05,good
+L009,41101,Tektronix TBS2000B 200MHz,25000,2026-08-15,good
+L010,41101,Rigol DS1054Z 50MHz,3500,2026-09-01,fair

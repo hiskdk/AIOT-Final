@@ -1,0 +1,33 @@
+category_code,name_zh,name_en,min_life_years,notes
+# 財物標準分類表（草案）
+# 來源：行政院主計總處《財物標準分類總說明》[14]
+# 狀態：草案，數值為示例，實作時請依原始文件核對
+#
+# 欄位說明：
+#   category_code  — 財物分類代碼
+#   name_zh        — 中文類別名稱
+#   name_en        — 英文類別名稱
+#   min_life_years — 最低使用年限（年）
+#   notes          — 備註
+#
+# 注意（DESIGN.md 第 7.1 章）：
+#   最低使用年限是「正常使用下的最低年限」；
+#   達到年限不代表應報廢，仍可使用者應延後報廢。
+#   與折舊年限語意不同，詳見 DESIGN.md 第 12.2 章待決事項 #3。
+#
+# TODO：依原始《財物標準分類》補充完整分類代碼與年限
+31101,桌上型電腦,Desktop Computer,5,含主機、螢幕、鍵盤、滑鼠
+31102,筆記型電腦,Laptop Computer,5,
+31103,伺服器,Server,5,含 GPU 主機
+31104,平板電腦,Tablet,5,
+31201,印表機,Printer,5,
+31202,掃描器,Scanner,5,
+31301,網路交換器,Network Switch,5,
+31302,路由器,Router,5,
+41101,示波器,Oscilloscope,10,量測儀器
+41102,訊號產生器,Signal Generator,10,
+41103,頻譜分析儀,Spectrum Analyzer,10,
+41104,萬用電表,Multimeter,5,
+51101,辦公桌,Office Desk,15,家具
+51102,辦公椅,Office Chair,10,
+# （其餘類別 TBD，待依原始文件補充）

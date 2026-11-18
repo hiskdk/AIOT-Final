@@ -1,0 +1,43 @@
+# .gitignore — LabSteward
+
+# 環境變數與金鑰（絕對不可提交）
+.env
+*.key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+.Python
+
+# SQLite 資料庫（含真實或測試資料，不提交）
+*.db
+*.sqlite
+*.sqlite3
+
+# 向量索引（大型二進位檔，不提交）
+*.index
+*.faiss
+chroma_db/
+
+# Playwright
+playwright-report/
+
+# Streamlit
+.streamlit/
+
+# 一般
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+
+# 個人資料保護：不提交含真實財產編號或個資的檔案
+# （請確認 data/ 下只有去識別化或合成資料）

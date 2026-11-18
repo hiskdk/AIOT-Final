@@ -1,0 +1,55 @@
+# knowledge/rules.yaml — 可設定規則檔（草案）
+#
+# 狀態：草案（v0.1）。數值以公開法規為例，各校細節不同。
+# 上線前請與校方財產管理組核對，替換為正式數值。
+#
+# 設計原則（DESIGN.md 第 4.4、7.1、7.2 章）：
+#   所有金額門檻與年限由此檔案讀取，以確定性程式判定。
+#   LLM 不參與判定，只負責解釋結果。
+#   法規修訂時只需更新此檔案，不改程式碼。
+#
+# 來源標記：[13][14][15] 對應 DESIGN.md 第 14 章參考文獻
+
+version: "0.1"
+institution: "TBD"  # 替換為實際學校名稱
+
+# 財產 vs. 物品定義 [13][14]
+asset_definition:
+  min_unit_price_twd: 10000       # 單價 NT$10,000 以上
+  min_service_life_years: 2       # 且使用年限 2 年以上，方為「財產」
+
+# 採購金額門檻 [15]（以臺大請購規範為例）
+procurement:
+  small_purchase_max_twd: 150000           # 小額採購：單位主管核准即可逕洽廠商
+  announcement_threshold_twd: 1500000      # 公告金額：須附價格分析
+  audit_threshold_twd: TBD                 # 查核金額（待確認）
+  major_procurement_threshold_twd: TBD     # 巨額採購門檻（待確認）
+  require_price_analysis_at_or_above_announcement: true  # 達公告金額須附價格分析 [15]
+  min_valid_offers: 3                      # 有效報價不足 3 筆則放寬條件重搜
+
+# Agent 系統參數（非法規，系統設計）
+agent_policy:
+  max_clarify_turns: TBD           # T_max：追問上限輪數（TBD）
+  max_retry_on_reject: TBD         # R_max：人工退回後最大重試次數（TBD）
+  max_relax_iterations: TBD        # K_max：比價放寬重搜最大次數（TBD）
+  split_order_window_days: TBD     # 拆單偵測比對期間（天數，TBD）
+  uncertainty_threshold: TBD       # tau：不確定度門檻（TBD）
+  min_utilization_rate: TBD        # u_min：閒置使用率門檻（TBD）
+
+# 需人工核准的動作（FR-11）
+approvals:
+  require_human_for:
+    - purchase_commit               # 確認採購
+    - disposal_commit               # 確認報廢
+    - asset_state_change            # 任何帳務狀態變更
+
+# 殘值估算參數（M3，待定）
+valuation:
+  min_market_data_samples: TBD     # N_min：啟用 GBM 的最小樣本數（TBD）
+  low_confidence_interval_delta: TBD  # delta：低信心區間寬度係數（TBD）
+  # 各類別預設年貶值率 d（待資料蒐集後補充）
+  default_depreciation_rates:
+    computer_equipment: TBD        # 資訊設備（例如筆電約 14.4%，參考 [11]）
+    measurement_instrument: TBD   # 量測儀器（TBD）
+    gpu_server: TBD               # GPU 主機（技術週期約 12–18 個月，參考 [16]）
+    other: TBD                    # 其他類別（TBD）

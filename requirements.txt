@@ -1,0 +1,46 @@
+# Python dependencies（預定）
+# 狀態：Proposal 階段，套件版本 TBD，實作時鎖定
+# 需要 Python 3.10+
+
+# LLM API（擇一，依選定 LLM 安裝）
+# anthropic          # Claude API
+# openai             # GPT API
+
+# Agent 框架（擇一）
+# langgraph          # LangGraph（首選）
+
+# 資料庫
+sqlalchemy
+# sqlite 內建於 Python 標準函式庫，無需額外安裝
+
+# 向量檢索
+faiss-cpu
+# chromadb           # 備選
+
+# BM25 檢索
+rank-bm25
+
+# 分析
+pandas
+scikit-learn
+lightgbm
+
+# 文件輸出
+python-docx
+openpyxl
+
+# 網頁擷取
+playwright
+
+# 介面
+streamlit
+
+# 環境變數
+python-dotenv
+
+# OCR（擇一，依實作選定）
+# pdfplumber
+# pytesseract
+
+# 測試
+pytest

@@ -1,0 +1,14 @@
+asset_id,name,spec,category_code,unit_price,purchase_date,status,custodian,location,working,utilization_30d,notes
+# 合成財產清冊（範例資料）
+# 狀態：合成／去識別化資料，僅供開發測試，不代表真實財產
+# 保管人欄位已去識別化（以 USERxxx 代替真實姓名）
+# 購置日期格式：YYYY-MM-DD
+#
+A001,桌上型電腦,Intel Core i7-12700 / 32GB RAM / 1TB SSD,31101,45000,2022-03-15,IN_STOCK,USER001,R101,1,0.3,
+A002,筆記型電腦,AMD Ryzen 7 / 16GB RAM / 512GB SSD,31102,38000,2021-08-20,LENT,USER002,R102,1,0.8,借出中
+A003,GPU 工作站,NVIDIA RTX 4090 / 64GB RAM / 2TB NVMe,31103,120000,2023-01-10,IN_STOCK,USER001,R103,1,0.15,使用率偏低
+A004,示波器,Tektronix TBS2000B 200MHz,41101,55000,2018-06-01,IN_STOCK,USER003,Lab1,1,0.05,超過最低使用年限仍可用
+A005,訊號產生器,Rigol DG1022Z 25MHz,41102,18000,2019-09-15,REPAIR,USER003,Lab1,0,,送修中
+A006,筆記型電腦,Intel Core i5 / 8GB RAM / 256GB SSD,31102,25000,2017-12-01,IN_STOCK,USER002,R101,1,0.02,年限已到但仍可用
+A007,網路交換器,Cisco Catalyst 2960 24-Port,31301,22000,2020-04-10,IN_STOCK,USER001,機房,1,0.9,
+A008,印表機,HP LaserJet Pro M404dn,31201,12000,2021-11-30,IN_STOCK,USER002,R101,0,,故障待修
